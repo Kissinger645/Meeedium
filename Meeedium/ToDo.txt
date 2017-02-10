@@ -1,0 +1,15 @@
+﻿
+
+
+You must also make sure your application is vulnerable to as few vulnerabilities as possible. 
+A logged in user should not be able to change the ID in the URL and access / edit another users blog post. 
+Also any user should not be able to access another users blog post to read if it is marked as not public.
+
+users
+BobbyK
+Bobby!1
+
+ElizabethK
+Password!1
+
+deleted this from accountcontroller

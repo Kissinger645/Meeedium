@@ -1,8 +1,34 @@
 ﻿<div class="container">
-@foreach (var blog in ViewBag.AllBlogs)
-{
-    <div class="row">
-        @blog.Title - @blog.Teaser - @blog.Created
-    </div>
-}
+<table class="table">
+    <tr>
+        <th>
+            Title
+        </th>
+        <th>
+            Teaser
+        </th>
+        <th>
+            Created
+        </th>
+    </tr>
+
+    @foreach (var blog in ViewBag.AllBlogs)
+    {
+        <tr>            
+            <td>
+                @blog.Title
+            </td>
+            <td>
+                @blog.Teaser
+            </td>
+            <td>
+                @blog.Created
+            </td>           
+            <td>               
+                 @Html.ActionLink("Read", "Details", "Blog", new { id = blog.Id }, new { @class = "read-more" })   
+            </td>
+        </tr>
+    }
+
+</table>
 </div>
